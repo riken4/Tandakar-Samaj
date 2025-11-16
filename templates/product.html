@@ -1,0 +1,314 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home {% endblock %}
+
+{% block extra_css %}
+<style>
+    .position-relative-main {
+        overflow: hidden;
+        cursor: zoom-in;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section>
+<div class="max-w-7xl mx-auto px-4 py-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Image Section -->
+        <div class="space-y-1 justify-center text-center">
+            <div class="position-relative-main bg-white rounded-lg h-140 border-1 border-gray-200 shadow-sm">
+                <img src="{% static 'image/oil painting2.jpg' %}"
+                    data-zoom-image="{% static 'image/oil painting2.jpg' %}" alt="Zip Tote Basket"
+                    class="mx-auto h-full object-cover rounded-lg" id="mainImage">
+            </div>
+
+            <!-- Thumbnail Images -->
+            <div class="grid grid-cols-4 gap-4 w-100 h-10 mx-auto mt-2">
+                <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
+            transition justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
+                    <img src="{% static 'image/oil painting1.jpg' %}" alt="View 1"
+                        class="object-cover rounded mx-auto h-full">
+                </div>
+
+                <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
+            transition justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
+                    <img src="{% static 'image/oil painting3.jpg' %}" alt="View 1"
+                        class="object-cover rounded mx-auto h-full">
+                </div>
+
+                <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
+            transition justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
+                    <img src="{% static 'image/team member2.jpg' %}" alt="View 1"
+                        class="object-cover rounded mx-auto h-full">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Product Info Section -->
+        <div class="space-y-3">
+            <div>
+                <h1 class="text-4xl font-bold text-gray-900 mb-2">Oil painting Art</h1>
+            </div>
+
+            <!-- Product Description -->
+            <p class="text-gray-700 leading-relaxed">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. </p>
+
+
+
+            <!-- Add to Bag Button -->
+            <div class="flex ">
+                <ul class=" space-y-2">
+                    <li class="text-gray-700">
+                        <div class="flex items-center gap-2">
+                            <strong class="text-gray-600 font-bold">Shop:</strong>
+                            <p class="text-gray-700 leading-relaxed m-0 p-0">Nepal Arts</p>
+                        </div>
+                    </li>
+                    <li class="text-gray-700">
+                        <div class="flex items-center gap-2">
+                            <strong class="text-gray-600 font-bold">location:</strong>
+                            <p class="text-gray-700 leading-relaxed m-0 p-0">Patan</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Accordion Sections -->
+            <div class="border-t border-gray-200 pt-6 space-y-4">
+                <!-- Features-->
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="w-full flex items-center justify-between text-left"
+                        onclick="toggleAccordion('features')">
+                        <span class="text-lg font-medium text-gray-900">Features</span>
+                        <svg id="features-icon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="features-content" class="hidden mt-4 text-gray-600 space-y-2">
+                        <p>• Hand-painted original oil on canvas</p>
+                        <p>• Dimensions: 30 inches x 20 inches</p>
+                        <p>• Signed by the artist (Nepal Arts)</p>
+                        <p>• Comes with a Certificate of Authenticity</p>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto  sm:px-6 lg:px-1">
+
+                    <div class="bg-white p-2 sm:p-2 rounded-sm shadow-xl border border-gray-200">
+                        <form action="#" method="POST" class="space-y-2">
+
+                            <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                    <div class="mt-1">
+                                        <input type="text" name="name" id="name" required
+                                            class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs focus:ring-blue-500 focus:border-blue-500 sm:text-base transition duration-150"
+                                            placeholder="Name">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email
+                                        Address</label>
+                                    <div class="mt-1">
+                                        <input type="email" name="email" id="email" required
+                                            class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs focus:ring-blue-500 focus:border-blue-500 sm:text-base transition duration-150"
+                                            placeholder="email@example.com">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                                <div class="mt-1">
+                                    <input type="text" name="subject" id="subject"
+                                        class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs focus:ring-blue-500 focus:border-blue-500 sm:text-base transition duration-150"
+                                        placeholder="">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Your
+                                    Message</label>
+                                <div class="mt-1">
+                                    <textarea id="message" name="message" rows="5" required
+                                        class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs focus:ring-blue-500 focus:border-blue-500 sm:text-base transition duration-150"
+                                        placeholder=""></textarea>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button type="submit"
+                                    class="w-full flex justify-center py-1 px-6 border border-transparent rounded-lg shadow-md text-xl font-bold text-white bg-gray-800 hover:bg-gray-600  ">
+                                    Send Inquiry
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<section>
+    <div class="bg-white shadow-2xl border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3">
+                <h2 class="text-4xl text-center font-bold  text-gray-800 dark:text-white">Shop</h2>
+
+
+
+                <div id="product-grid" class="flex flex-wrap -m-1 md:-m-2">
+                    <div class="max-w-7xl mx-auto px-1 py-8">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                            <!-- Product 1: Basic Tee Black -->
+                            <div class="bg-white rounded-md shadow p-2 flex flex-col items-center">
+                                <div
+                                    class="w-full aspect-square h-80 flex items-center justify-center overflow-hidden mb-2">
+                                    <!-- Swiper carousel for product images -->
+                                    <div class="swiper w-full h-full rounded">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide flex items-center justify-center h-full">
+                                                <img src="{% static 'image/oil _painting.jpg' %}" alt="Oil Painting 1"
+                                                    class="w-full h-full object-cover rounded">
+                                            </div>
+                                            <div class="swiper-slide flex items-center justify-center h-full">
+                                                <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" alt="Oil Painting 2"
+                                                    class="w-full h-full object-cover rounded">
+                                            </div>
+                                            <!-- Add more slides as needed -->
+                                        </div>
+                                        <!-- Navigation buttons -->
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+
+                                    </div>
+                                </div>
+                                <div class="w-full flex justify-between items-center mb-2">
+                                    <div>
+                                        <h3 class="text-base font-semibold text-gray-900">Oil Painting</h3>
+                                        <p class="text-sm text-gray-500">Made in Nepal</p>
+                                    </div>
+                                    <a href="" class="text-sm font-bold text-gray-700">View More</a>
+                                </div>
+                            </div>
+                            <!-- Product 2: Basic Tee Black -->
+                            <div class="bg-white rounded-md shadow p-2 flex flex-col items-center">
+                                <div
+                                    class="w-full aspect-square h-80 flex items-center justify-center overflow-hidden mb-2">
+                                    <!-- Swiper carousel for product images -->
+                                    <div class="swiper w-full h-full rounded">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide flex items-center justify-center h-full">
+                                                <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" alt="Oil Painting 1"
+                                                    class="w-full h-full object-cover rounded">
+                                            </div>
+                                            <div class="swiper-slide flex items-center justify-center h-full">
+                                                <img src="{% static 'image/oil _painting.jpg' %}" alt="Oil Painting 2"
+                                                    class="w-full h-full object-cover rounded">
+                                            </div>
+                                            <!-- Add more slides as needed -->
+                                        </div>
+                                        <!-- Navigation buttons -->
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+
+                                    </div>
+                                </div>
+                                <div class="w-full flex justify-between items-center mb-2">
+                                    <div>
+                                        <h3 class="text-base font-semibold text-gray-900">Oil Painting</h3>
+                                        <p class="text-sm text-gray-500">Made in Nepal</p>
+                                    </div>
+                                    <a href="" class="text-sm font-bold text-gray-700">View More</a>
+                                </div>
+                            </div>
+                            
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.min.js"></script>
+
+<script>
+    // Image Zoom Logic 
+    const container = document.querySelector('.position-relative-main');
+    const image = document.getElementById('mainImage');
+
+    if (container && image) {
+        container.addEventListener('mousemove', (e) => {
+            const { left, top, width, height } = container.getBoundingClientRect();
+            const x = ((e.pageX - left - window.scrollX) / width) * 100;
+            const y = ((e.pageY - top - window.scrollY) / height) * 100;
+            image.style.transformOrigin = `${x}% ${y}%`;
+            image.style.transform = "scale(1.5)"; // zoom level
+        });
+
+        container.addEventListener('mouseleave', () => {
+            image.style.transformOrigin = "center center";
+            image.style.transform = "scale(1)";
+        });
+    }
+    function changeImage(element) {
+        // Get the clicked thumbnail's image src
+        const thumbnailImg = element.querySelector('img');
+        const newImageSrc = thumbnailImg.src;
+
+        // Update main image
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = newImageSrc;
+        mainImage.setAttribute('data-zoom-image', newImageSrc);
+
+        // Update active border on thumbnails
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        thumbnails.forEach((thumb) => {
+            thumb.classList.remove('border-blue-600');
+            thumb.classList.add('border-gray-200');
+        });
+
+        // Add active border to clicked thumbnail
+        element.classList.remove('border-gray-200');
+        element.classList.add('border-blue-600');
+    }
+
+    // --- Accordion Logic ---
+    window.toggleAccordion = function (sectionId) {
+        const content = document.getElementById(`${sectionId}-content`);
+        const icon = document.getElementById(`${sectionId}-icon`);
+
+        if (content.classList.contains('hidden')) {
+            // Open the accordion
+            content.classList.remove('hidden');
+            // Change the plus (+) icon to a minus (-) icon (rotate the cross)
+            icon.style.transform = 'rotate(45deg)';
+        } else {
+            // Close the accordion
+            content.classList.add('hidden');
+            // Change the minus (-) icon back to a plus (+) icon
+            icon.style.transform = 'rotate(0deg)';
+        }
+    };
+
+    // Initialize zoom functionality when document is ready
+    $(document).ready(function () {
+        // Initialize jQuery zoom plugin
+        $('#mainImage').zoom({
+            on: 'mouseover',   // zoom when hover
+            magnify: 1.5       // zoom level
+        });
+    });
+</script>
+{% endblock %}

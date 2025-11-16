@@ -1,0 +1,710 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home {% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+<style>
+ 
+  .splide__list {
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+
+    transform: scale(1.1);
+  }
+
+  .testimonial-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .testimonial-card:hover .testimonial-overlay {
+    opacity: 1;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<body class="bg-gray-50">
+
+
+  <!-- Main Content 1-->
+  <section class="container  w-full max-w-7xl mx-auto px-4 py-8 ">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[calc(100vh-150px)] ">
+
+      <!-- Column 1: Product List (Scrollable) -->
+      <div class="bg-white rounded-lg shadow-md px-4 overflow-y-auto h-150">
+        <h2 class="text-xl font-bold mb-4 text-gray-800 sticky top-0 bg-white p-2">Featured Products</h2>
+        <div class="space-y-4">
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/oil painting1.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/oil painting1.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/oil painting1.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/oil painting1.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Column 1: Product List (Scrollable) -->
+      <div class="bg-white rounded-lg shadow-md px-4 overflow-y-auto h-150">
+        <h2 class="text-xl font-bold mb-4 text-gray-800 sticky top-0 bg-white p-2">Featured Products</h2>
+        <div class="space-y-4">
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Column 3: Advertisement Images -->
+      <div class="w-100 h-150 ">
+        <!-- Ad 1 -->
+        <img src="{% static 'image/ad1.jpg' %}" class="h-full w-full object-cover rounded-md">
+      </div>
+
+    </div>
+  </section>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-yellow-200 to-orange-400 min-h-screen relative overflow-hidden">
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Left Content -->
+        <div class="space-y-8">
+          <h1 class="text-6xl md:text-7xl font-bold leading-tight">
+            <span class="text-green-600">Organic</span> Foods at<br>
+            your <span class="text-gray-900">Doorsteps</span>
+          </h1>
+
+          <p class="text-gray-600 text-lg">
+            Dignissim massa diam elementum.
+          </p>
+
+          <div class="flex gap-4">
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold transition duration-300">
+              START SHOPPING
+            </button>
+            <button
+              class="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-full font-semibold transition duration-300">
+              JOIN NOW
+            </button>
+          </div>
+
+          <!-- Statistics -->
+          <div class="flex gap-12 pt-8">
+            <div>
+              <h3 class="text-4xl font-bold text-gray-900">14k+</h3>
+              <p class="text-gray-600 text-sm uppercase tracking-wide">Product<br>Varieties</p>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold text-gray-900">50k+</h3>
+              <p class="text-gray-600 text-sm uppercase tracking-wide">Happy<br>Customers</p>
+            </div>
+            <div>
+              <h3 class="text-4xl font-bold text-gray-900">10+</h3>
+              <p class="text-gray-600 text-sm uppercase tracking-wide">Store<br>Locations</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content - Image Placeholder -->
+        <div class="relative">
+          <div class="w-full h-96 md:h-full flex items-center justify-center">
+            <svg class="w-64 h-64 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature Cards -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-0">
+          <!-- Fresh from Farm -->
+          <div class="bg-green-600 text-white p-8 flex items-start gap-4">
+            <svg class="w-12 h-12 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Fresh from farm</h3>
+              <p class="text-green-100">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+            </div>
+          </div>
+
+          <!-- 100% Organic -->
+          <div class="bg-gray-800 text-white p-8 flex items-start gap-4">
+            <svg class="w-12 h-12 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">100% Organic</h3>
+              <p class="text-gray-300">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+            </div>
+          </div>
+
+          <!-- Free Delivery -->
+          <div class="bg-orange-600 text-white p-8 flex items-start gap-4">
+            <svg class="w-12 h-12 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+            </svg>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Free delivery</h3>
+              <p class="text-orange-100">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content 2 -->
+  <section class="container  px-4 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[calc(100vh-150px)] ">
+
+      <!-- Column 1: Product List (Scrollable) -->
+      <div class="bg-white rounded-lg shadow-md px-4 overflow-y-auto h-150">
+        <h2 class="text-xl font-bold mb-4 text-gray-800 sticky top-0 bg-white p-2">Featured Products</h2>
+        <div class="space-y-4">
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/oil _painting.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/oil _painting.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/oil _painting.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/oil _painting.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Column 1: Product List (Scrollable) -->
+      <div class="bg-white rounded-lg shadow-md px-4 overflow-y-auto h-150">
+        <h2 class="text-xl font-bold mb-4 text-gray-800 sticky top-0 bg-white p-2">Featured Products</h2>
+        <div class="space-y-4">
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 1 -->
+          <div class="border rounded-lg p-4 hover:shadow-xl transition flex h-40">
+            <div class="w-1/3 mr-4 flex-shrink-0">
+              <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" class="h-full w-full object-cover rounded-md">
+            </div>
+
+            <div class="w-2/3 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-xl mb-1 truncate">Oil Painting Art</h3>
+                <p class="text-gray-500 text-sm mb-2 line-clamp-2">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <a href="#"
+                  class="inline-block bg-zinc-500 text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-150">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Column 3: Advertisement Images -->
+      <div class="w-100 h-150 ">
+        <!-- Ad 1 -->
+        <img src="{% static 'image/ad1.jpg' %}" class="h-full w-full object-cover rounded-md">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="bg-gradient-to-r from-orange-500 to-yellow-200 min-h-screen relative overflow-hidden">
+
+    <div class="container mx-auto px-6 ">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold text-gray-900 mb-4">About Our Store</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          We're dedicated to bringing you the freshest organic produce straight from local farms to your doorstep.
+          Quality, sustainability, and customer satisfaction are at the heart of everything we do.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div class="space-y-6">
+          <h3 class="text-3xl font-bold text-gray-900">Why Choose Us?</h3>
+          <p class="text-gray-600">
+            With over 14,000+ organic product varieties sourced from certified organic farms,
+            we ensure that every item meets the highest standards of quality and freshness.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd" />
+              </svg>
+              <div>
+                <h4 class="font-semibold text-gray-900">100% Certified Organic</h4>
+                <p class="text-gray-600">All our products are certified organic and chemical-free</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd" />
+              </svg>
+              <div>
+                <h4 class="font-semibold text-gray-900">Farm Fresh Guarantee</h4>
+                <p class="text-gray-600">Delivered within 24 hours of harvest for maximum freshness</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd" />
+              </svg>
+              <div>
+                <h4 class="font-semibold text-gray-900">Support Local Farmers</h4>
+                <p class="text-gray-600">We partner with local organic farms to support sustainable agriculture</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <!-- Additional Info -->
+      <div class="grid md:grid-cols-3 gap-8 mt-16">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h4 class="text-xl font-semibold text-gray-900 mb-2">24/7 Service</h4>
+          <p class="text-gray-600">Order anytime, we're always ready to serve you</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h4 class="text-xl font-semibold text-gray-900 mb-2">Quality Assured</h4>
+          <p class="text-gray-600">Every product is carefully inspected for quality</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h4 class="text-xl font-semibold text-gray-900 mb-2">Easy Returns</h4>
+          <p class="text-gray-600">Not satisfied? Return within 7 days for a full refund</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 max-w-7xl mx-auto">
+    <!-- Header Section -->
+    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center ">
+      <div class="flex-1">
+
+        <h2 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-4  text-center">
+          Blog
+        </h2>
+      </div>
+    </div>
+
+    <!-- Carousel Section -->
+    <div class="relative">
+
+      <!-- Carousel Container (Splide structure) -->
+      <div class="splide mx-auto   py-12" id="carousel">
+        <div class="splide__track w-full max-w-7xl mx-auto">
+          <ul class="splide__list">
+
+            <li class="splide__slide p-2">
+              <div
+                class="testimonial-card w-full h-[450px] sm:h-[500px] rounded-3xl overflow-hidden relative cursor-pointer shadow-xl transition duration-300 ease-in-out hover:scale-[1.05] hover:shadow-2xl group">
+                <img src="{% static 'image/oil painting1.jpg' %}" class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-6 sm:p-8 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
+                  <p class="text-white text-xl sm:text-2xl font-semibold mb-6">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  </p>
+
+                  <div class="flex items-center justify-between pt-4 border-t border-white/20">
+                    <div class="mb-2">
+                      <p class="text-white font-bold">Oil Painting Art</p>
+                      <p class="text-gray-300 text-sm">made in nepal</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </li>
+
+<li class="splide__slide p-2">
+              <div
+                class="testimonial-card w-full h-[450px] sm:h-[500px] rounded-3xl overflow-hidden relative cursor-pointer shadow-xl transition duration-300 ease-in-out hover:scale-[1.05] hover:shadow-2xl group">
+                <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-6 sm:p-8 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
+                  <p class="text-white text-xl sm:text-2xl font-semibold mb-6">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  </p>
+
+                  <div class="flex items-center justify-between pt-4 border-t border-white/20">
+                    <div class="mb-2">
+                      <p class="text-white font-bold">Dhaka Nepali Cholo</p>
+                      <p class="text-gray-300 text-sm">made in nepal</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+  </section>
+</body>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+<script>
+  // Use an event listener to ensure the HTML elements are loaded before running the JS
+  document.addEventListener('DOMContentLoaded', function () {
+      var splide = new Splide('.splide', {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        gap: '1rem',
+      });
+
+      splide.mount();
+  });
+</script>
+{% endblock %}

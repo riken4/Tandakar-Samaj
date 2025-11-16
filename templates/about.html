@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home {% endblock %}
+
+{% block extra_css %}
+<style>
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="bg-yellow-400 py-20 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">About us</h1>
+        <p class="text-gray-700 max-w-2xl mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit tellus, luctus nec ullamcorper mattis,
+            pulvinar dapibus leo.
+        </p>
+    </div>
+</section>
+
+<!-- Team Photos Grid -->
+<section class="max-w-6xl mx-auto px-4 -mt-12">
+    <div class="flex justify-center gap-4 flex-wrap">
+        <div
+            class="w-40 h-40 bg-white rounded-lg shadow-lg overflow-hidden transform rotate-[-3deg] hover:rotate-0 transition-transform">
+            <img src="{% static 'image/oil _painting.jpg' %}" class="w-full h-full object-cover">
+        </div>
+        <div
+            class="w-40 h-40 bg-white rounded-lg shadow-lg overflow-hidden transform rotate-[2deg] hover:rotate-0 transition-transform">
+            <img src="{% static 'image/oil _painting.jpg' %}" class="w-full h-full object-cover">
+        </div>
+        <div
+            class="w-40 h-40 bg-white rounded-lg shadow-lg overflow-hidden transform rotate-[-2deg] hover:rotate-0 transition-transform">
+            <img src="{% static 'image/oil _painting.jpg' %}" class="w-full h-full object-cover">
+        </div>
+        <div
+            class="w-40 h-40 bg-white rounded-lg shadow-lg overflow-hidden transform rotate-[3deg] hover:rotate-0 transition-transform">
+            <img src="{% static 'image/oil _painting.jpg' %}" class="w-full h-full object-cover">
+        </div>
+    </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+            Why do we use it? </h2>
+        <div class=" text-center gap-8">
+            <p class="text-gray-600 leading-relaxed">
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here. </p>
+                <br>
+            <p class="text-gray-600 leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+
+    <!-- image/ video Section -->
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="relative">
+            <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=400&fit=crop"
+                    alt="Business owner" class="w-full h-80 object-cover">
+               
+            </div>
+            
+        </div>
+
+        <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                Where does it come from?<br> Nepal
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. </p>
+            <div class="bg-gray-100 border-l-4 border-yellow-400 p-4 rounded">
+                <p class="text-gray-700 italic">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}
