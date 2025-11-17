@@ -14,10 +14,6 @@
     .swiper-button-prev {
         display: none !important;
     }
-
-    /* Custom utility classes or necessary overrides would go here, but the goal is to use Tailwind */
-
-    /* Ensure the product image respects max-height in the card */
     .product-image {
         max-height: 160px;
         object-fit: contain;
@@ -82,7 +78,7 @@
 
         <div class="w-full lg:w-5/6 xl:w-7/8 px-1 md:px-2 lg:px-3 ml-auto ">
             <div class="bg-white shadow-2xl border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3">
-                <h2 class="text-4xl text-center font-bold  text-gray-800 dark:text-white">Shop</h2>
+                <h2 class="text-4xl  text-center font-bold  text-gray-800 dark:text-white">Shop</h2>
 
 
 
@@ -97,14 +93,13 @@
                                     <div class="swiper w-full h-full rounded">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide flex items-center justify-center h-full">
-                                                <img src="{% static 'image/oil _painting.jpg' %}" alt="Oil Painting 1"
+                                                <img src="{% static 'image/oil painting1.jpg' %}" alt="Oil Painting 1"
                                                     class="w-full h-full object-cover rounded">
                                             </div>
                                             <div class="swiper-slide flex items-center justify-center h-full">
                                                 <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" alt="Oil Painting 2"
                                                     class="w-full h-full object-cover rounded">
                                             </div>
-                                            <!-- Add more slides as needed -->
                                         </div>
                                         <!-- Navigation buttons -->
                                         <div class="swiper-button-next"></div>
@@ -117,7 +112,7 @@
                                         <h3 class="text-base font-semibold text-gray-900">Oil Painting</h3>
                                         <p class="text-sm text-gray-500">Made in Nepal</p>
                                     </div>
-                                    <a href="" class="text-sm font-bold text-gray-700">View More</a>
+                                    <a href="{% url 'website:product' %}" class="text-sm font-bold text-gray-700">View More</a>
                                 </div>
                             </div>
                             <!-- Product 2: Basic Tee Black -->
@@ -132,12 +127,10 @@
                                                     class="w-full h-full object-cover rounded">
                                             </div>
                                             <div class="swiper-slide flex items-center justify-center h-full">
-                                                <img src="{% static 'image/oil _painting.jpg' %}" alt="Oil Painting 2"
+                                                <img src="{% static 'image/oil painting1.jpg' %}" alt="Oil Painting 2"
                                                     class="w-full h-full object-cover rounded">
                                             </div>
-                                            <!-- Add more slides as needed -->
                                         </div>
-                                        <!-- Navigation buttons -->
                                         <div class="swiper-button-next"></div>
                                         <div class="swiper-button-prev"></div>
 

@@ -11,4 +11,11 @@ urlpatterns = [
         path('shop', views.shop, name='shop'),
         path('product', views.product, name='product'),
         path('event', views.event, name='event'),
+        path('services', views.services, name='services'),
+        path('blog', views.blog, name='blog'),
+        path('faq', views.faq, name='faq'),
+        path('term_of_services', views.term_of_services, name='term_of_services'),
+        path('privacy_policy', views.privacy_policy, name='privacy_policy'),
+
+
 ]

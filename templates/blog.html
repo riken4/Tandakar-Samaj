@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}policy - hello_bajar{% endblock %}
+
+{% block content %}
+<section>
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <!-- Latest News Section -->
+        <section class="mb-16">
+            <h1 class="text-4xl font-bold text-gray-900 mb-8">Latest News</h1>
+
+            <div class="grid gap-8">
+                <!-- Featured Article -->
+                <div
+                    class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row h-100">
+
+                    <!-- Left Image -->
+                    <img src="{% static 'image/blog post1.jpg' %}" alt="Credit card"
+                        class="mx-auto h-full md:w-1/2 h-64 md:h-auto object-cover">
+
+                    <!-- Right Content -->
+                    <div class="p-6 flex flex-col  md:w-1/2">
+                        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                            Lorem
+                        </span>
+
+                        <h2 class="text-xl font-bold text-gray-900 mt-2 mb-3">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </h2>
+
+                        <p class="text-sm text-gray-600 mb-3">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+
+                        <p class="text-sm text-gray-600">
+                            lomre • 25 Jan 2022
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Small Articles Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- Article 1 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="{% static 'image/blog post2.jpg' %}" alt="Mobile banking"
+                            class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Lorem</span>
+                            <h3 class="text-sm font-bold text-gray-900 mt-2 mb-2 line-clamp-2">Lorem Ipsum is simply
+                                dummy text of the printing and typesetting industry....</h3>
+                            <div class="flex items-center gap-2">
+                                <p class="text-xs text-gray-600">Lorem</p>
+                                <p class="text-xs text-gray-600">• 25 Jan 2022</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="{% static 'image/blog post3.jpg' %}" alt="Mobile app"
+                            class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Lorem</span>
+                            <h3 class="text-sm font-bold text-gray-900 mt-2 mb-2 line-clamp-2">Barely half of banks' own
+                                employees would recommend their inter...</h3>
+                            <div class="flex items-center gap-2">
+                                <p class="text-xs text-gray-600">Lorem</p>
+                                <p class="text-xs text-gray-600">• 25 Jan 2022</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="{% static 'image/blog post1.jpg' %}" alt="Analytics" class="w-full h-32 object-cover">
+                        <div class="p-4">
+                            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Lorem</span>
+                            <h3 class="text-sm font-bold text-gray-900 mt-2 mb-2 line-clamp-2">Lorem Ipsum is simply
+                                dummy text of the printing and typesetting industry...</h3>
+                            <div class="flex items-center gap-2">
+                                <p class="text-xs text-gray-600">Lorem</p>
+                                <p class="text-xs text-gray-600">• 25 Jan 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% endblock %}
+
+        {% block extra_js %}
+        {% endblock %}

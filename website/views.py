@@ -20,3 +20,17 @@ def product(request):
     return render(request, 'product.html')
 def event(request):
     return render(request, 'event.html')
+def services(request):
+    return render(request, 'services.html')
+
+def blog(request):
+    return render(request, 'blog.html')
+
+def faq(request):
+    return render(request, 'nav info/faq.html')
+
+def term_of_services(request):
+    return render(request, 'nav info/term_of_services.html')
+
+def privacy_policy(request):
+    return render(request, 'nav info/privacy_policy.html')

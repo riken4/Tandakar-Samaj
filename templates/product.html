@@ -263,23 +263,19 @@
         });
     }
     function changeImage(element) {
-        // Get the clicked thumbnail's image src
         const thumbnailImg = element.querySelector('img');
         const newImageSrc = thumbnailImg.src;
 
-        // Update main image
         const mainImage = document.getElementById('mainImage');
         mainImage.src = newImageSrc;
         mainImage.setAttribute('data-zoom-image', newImageSrc);
 
-        // Update active border on thumbnails
         const thumbnails = document.querySelectorAll('.thumbnail');
         thumbnails.forEach((thumb) => {
             thumb.classList.remove('border-blue-600');
             thumb.classList.add('border-gray-200');
         });
 
-        // Add active border to clicked thumbnail
         element.classList.remove('border-gray-200');
         element.classList.add('border-blue-600');
     }
@@ -290,24 +286,18 @@
         const icon = document.getElementById(`${sectionId}-icon`);
 
         if (content.classList.contains('hidden')) {
-            // Open the accordion
             content.classList.remove('hidden');
-            // Change the plus (+) icon to a minus (-) icon (rotate the cross)
             icon.style.transform = 'rotate(45deg)';
         } else {
-            // Close the accordion
             content.classList.add('hidden');
-            // Change the minus (-) icon back to a plus (+) icon
             icon.style.transform = 'rotate(0deg)';
         }
     };
 
-    // Initialize zoom functionality when document is ready
     $(document).ready(function () {
-        // Initialize jQuery zoom plugin
         $('#mainImage').zoom({
-            on: 'mouseover',   // zoom when hover
-            magnify: 1.5       // zoom level
+            on: 'mouseover',   
+            magnify: 1.5       
         });
     });
 </script>
