@@ -13,94 +13,94 @@
 {% endblock %}
 
 {% block content %}
-<section>
-<div class="max-w-7xl mx-auto px-4 py-4">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Image Section -->
-        <div class="space-y-1 justify-center text-center">
-            <div class="position-relative-main bg-white rounded-lg h-140 border-1 border-gray-200 shadow-sm">
-                <img src="{% static 'image/oil painting2.jpg' %}"
-                    data-zoom-image="{% static 'image/oil painting2.jpg' %}" alt="Zip Tote Basket"
-                    class="mx-auto h-full object-cover rounded-lg" id="mainImage">
-            </div>
-
-            <!-- Thumbnail Images -->
-            <div class="grid grid-cols-4 gap-4 w-100 h-10 mx-auto mt-2">
-                <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
-            transition justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
-                    <img src="{% static 'image/oil painting1.jpg' %}" alt="View 1"
-                        class="object-cover rounded mx-auto h-full">
+<section class="mb-18">
+    <div class="max-w-7xl mx-auto px-4 py-4 ">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Image Section -->
+            <div class="space-y-1 justify-center text-center">
+                <div class="position-relative-main bg-white rounded-lg h-140 border-1 border-gray-200 shadow-sm">
+                    <img src="{% static 'image/oil painting2.jpg' %}"
+                        data-zoom-image="{% static 'image/oil painting2.jpg' %}" alt="Zip Tote Basket"
+                        class="mx-auto h-full object-cover rounded-lg" id="mainImage">
                 </div>
 
-                <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
+                <!-- Thumbnail Images -->
+                <div class="grid grid-cols-4 gap-4 w-100 h-10 mx-auto mt-2">
+                    <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
             transition justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
-                    <img src="{% static 'image/oil painting3.jpg' %}" alt="View 1"
-                        class="object-cover rounded mx-auto h-full">
+                        <img src="{% static 'image/oil painting1.jpg' %}" alt="View 1"
+                            class="object-cover rounded mx-auto h-full">
+                    </div>
+
+                    <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
+            transition justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
+                        <img src="{% static 'image/oil painting3.jpg' %}" alt="View 1"
+                            class="object-cover rounded mx-auto h-full">
+                    </div>
+
+                    <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
+            transition justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
+                        <img src="{% static 'image/team member2.jpg' %}" alt="View 1"
+                            class="object-cover rounded mx-auto h-full">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Product Info Section -->
+            <div class="space-y-3">
+                <div>
+                    <h1 class="text-4xl font-bold text-gray-900 mb-2">Oil painting Art</h1>
                 </div>
 
-                <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
-            transition justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
-                    <img src="{% static 'image/team member2.jpg' %}" alt="View 1"
-                        class="object-cover rounded mx-auto h-full">
+                <!-- Product Description -->
+                <p class="text-gray-700 leading-relaxed">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and
+                    scrambled it to make a type specimen book. </p>
+
+
+
+                <!-- Add to Bag Button -->
+                <div class="flex ">
+                    <ul class=" space-y-2">
+                        <li class="text-gray-700">
+                            <div class="flex items-center gap-2">
+                                <strong class="text-gray-600 font-bold">Shop:</strong>
+                                <p class="text-gray-700 leading-relaxed m-0 p-0">Nepal Arts</p>
+                            </div>
+                        </li>
+                        <li class="text-gray-700">
+                            <div class="flex items-center gap-2">
+                                <strong class="text-gray-600 font-bold">location:</strong>
+                                <p class="text-gray-700 leading-relaxed m-0 p-0">Patan</p>
+                            </div>
+                        </li>
+
+                    </ul>
+
                 </div>
+                <div class="text-gray-700">
+                    <strong class="text-gray-600 font-bold">Features</strong>
 
-            </div>
-        </div>
-
-        <!-- Product Info Section -->
-        <div class="space-y-3">
-            <div>
-                <h1 class="text-4xl font-bold text-gray-900 mb-2">Oil painting Art</h1>
-            </div>
-
-            <!-- Product Description -->
-            <p class="text-gray-700 leading-relaxed">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. </p>
-
-
-
-            <!-- Add to Bag Button -->
-            <div class="flex ">
-                <ul class=" space-y-2">
-                    <li class="text-gray-700">
-                        <div class="flex items-center gap-2">
-                            <strong class="text-gray-600 font-bold">Shop:</strong>
-                            <p class="text-gray-700 leading-relaxed m-0 p-0">Nepal Arts</p>
-                        </div>
-                    </li>
-                    <li class="text-gray-700">
-                        <div class="flex items-center gap-2">
-                            <strong class="text-gray-600 font-bold">location:</strong>
-                            <p class="text-gray-700 leading-relaxed m-0 p-0">Patan</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- Accordion Sections -->
-            <div class="border-t border-gray-200 pt-6 space-y-4">
-                <!-- Features-->
+                    <ul class="text-gray-600 mx-5 list-disc ">
+                        <li>Hand-painted original oil on canvas</li>
+                        <li>Dimensions: 30 inches x 20 inches</li>
+                        <li>Signed by the artist (Nepal Arts)</li>
+                        <li>Comes with a Certificate of Authenticity</li>
+                    </ul>
+                </div>
                 <div class="border-b border-gray-200 pb-4">
                     <button class="w-full flex items-center justify-between text-left"
                         onclick="toggleAccordion('features')">
-                        <span class="text-lg font-medium text-gray-900">Features</span>
+                        <span class="text-lg font-medium text-gray-900">Inquiries</span>
                         <svg id="features-icon" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                         </svg>
                     </button>
                     <div id="features-content" class="hidden mt-4 text-gray-600 space-y-2">
-                        <p>• Hand-painted original oil on canvas</p>
-                        <p>• Dimensions: 30 inches x 20 inches</p>
-                        <p>• Signed by the artist (Nepal Arts)</p>
-                        <p>• Comes with a Certificate of Authenticity</p>
-                    </div>
-                </div>
-
-                <div class="max-w-4xl mx-auto  sm:px-6 lg:px-1">
-
-                    <div class="bg-white p-2 sm:p-2 rounded-sm shadow-xl border border-gray-200">
                         <form action="#" method="POST" class="space-y-2">
 
                             <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
@@ -155,14 +155,12 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 </section>
+
 <section>
     <div class="bg-white shadow-2xl border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3">
                 <h2 class="text-4xl text-center font-bold  text-gray-800 dark:text-white">Shop</h2>
-
-
-
                 <div id="product-grid" class="flex flex-wrap -m-1 md:-m-2">
                     <div class="max-w-7xl mx-auto px-1 py-8">
                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -254,7 +252,7 @@
             const x = ((e.pageX - left - window.scrollX) / width) * 100;
             const y = ((e.pageY - top - window.scrollY) / height) * 100;
             image.style.transformOrigin = `${x}% ${y}%`;
-            image.style.transform = "scale(1.5)"; // zoom level
+            image.style.transform = "scale(1.5)"; 
         });
 
         container.addEventListener('mouseleave', () => {

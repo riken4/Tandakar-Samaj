@@ -34,3 +34,6 @@ def term_of_services(request):
 
 def privacy_policy(request):
     return render(request, 'nav info/privacy_policy.html')
+
+def all_product(request):
+    return render(request, 'all_product.html')
