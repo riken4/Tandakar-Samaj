@@ -37,3 +37,6 @@ def privacy_policy(request):
 
 def all_product(request):
     return render(request, 'all_product.html')
+
+def account(request):
+    return render(request, 'account.html')

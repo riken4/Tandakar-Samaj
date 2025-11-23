@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block content %}
-<section class="mb-18">
+<section class="mb-18 ">
     <div class="max-w-7xl mx-auto px-4 py-4 ">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- Image Section -->
@@ -27,19 +27,19 @@
                 <!-- Thumbnail Images -->
                 <div class="grid grid-cols-4 gap-4 w-100 h-10 mx-auto mt-2">
                     <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
-            transition justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
+             justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
                         <img src="{% static 'image/oil painting1.jpg' %}" alt="View 1"
                             class="object-cover rounded mx-auto h-full">
                     </div>
 
                     <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
-            transition justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
+             justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
                         <img src="{% static 'image/oil painting3.jpg' %}" alt="View 1"
                             class="object-cover rounded mx-auto h-full">
                     </div>
 
                     <div class="bg-white rounded-lg p-1 border-1 border-gray-200 hover:border-blue-600 
-            transition justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
+             justify-center thumbnail flex items-center h-30" onclick="changeImage(this)">
                         <img src="{% static 'image/team member2.jpg' %}" alt="View 1"
                             class="object-cover rounded mx-auto h-full">
                     </div>
@@ -50,7 +50,7 @@
             <!-- Product Info Section -->
             <div class="space-y-3">
                 <div>
-                    <h1 class="text-4xl font-bold text-gray-900 mb-2">Oil painting Art</h1>
+                    <h1 class="text-4xl font-bold text-gray-900 mb-2 mt-14 md:mt-0">Oil painting Art</h1>
                 </div>
 
                 <!-- Product Description -->
@@ -159,78 +159,68 @@
 </section>
 
 <section>
-    <div class="bg-white shadow-2xl border border-gray-200 dark:border-gray-700 rounded-lg p-2 md:p-3">
-                <h2 class="text-4xl text-center font-bold  text-gray-800 dark:text-white">Shop</h2>
-                <div id="product-grid" class="flex flex-wrap -m-1 md:-m-2">
-                    <div class="max-w-7xl mx-auto px-1 py-8">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                            <!-- Product 1: Basic Tee Black -->
-                            <div class="bg-white rounded-md shadow p-2 flex flex-col items-center">
-                                <div
-                                    class="w-full aspect-square h-80 flex items-center justify-center overflow-hidden mb-2">
-                                    <!-- Swiper carousel for product images -->
-                                    <div class="swiper w-full h-full rounded">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide flex items-center justify-center h-full">
-                                                <img src="{% static 'image/oil _painting.jpg' %}" alt="Oil Painting 1"
-                                                    class="w-full h-full object-cover rounded">
-                                            </div>
-                                            <div class="swiper-slide flex items-center justify-center h-full">
-                                                <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" alt="Oil Painting 2"
-                                                    class="w-full h-full object-cover rounded">
-                                            </div>
-                                            <!-- Add more slides as needed -->
-                                        </div>
-                                        <!-- Navigation buttons -->
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-
+    <div class="bg-white shadow-2xl  dark:border-gray-700 rounded-lg p-2 md:p-3">
+                <h2 class="text-4xl text-center font-bold  text-gray-800 ">Shop</h2>
+               <div
+                    class="grid grid-cols-2 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+                    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-3 sm:p-4 flex flex-col">
+                        <div class="w-full aspect-square mb-3 overflow-hidden rounded-lg">
+                            <div class="swiper w-full h-full">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="{% static 'image/oil painting1.jpg' %}" alt="Oil Painting"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" alt="Nepali Cholo"
+                                            class="w-full h-full object-cover">
                                     </div>
                                 </div>
-                                <div class="w-full flex justify-between items-center mb-2">
-                                    <div>
-                                        <h3 class="text-base font-semibold text-gray-900">Oil Painting</h3>
-                                        <p class="text-sm text-gray-500">Made in Nepal</p>
-                                    </div>
-                                    <a href="" class="text-sm font-bold text-gray-700">View More</a>
-                                </div>
+                                <div class="swiper-button-next !text-white "></div>
+                                <div class="swiper-button-prev !text-white "></div>
                             </div>
-                            <!-- Product 2: Basic Tee Black -->
-                            <div class="bg-white rounded-md shadow p-2 flex flex-col items-center">
-                                <div
-                                    class="w-full aspect-square h-80 flex items-center justify-center overflow-hidden mb-2">
-                                    <!-- Swiper carousel for product images -->
-                                    <div class="swiper w-full h-full rounded">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide flex items-center justify-center h-full">
-                                                <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" alt="Oil Painting 1"
-                                                    class="w-full h-full object-cover rounded">
-                                            </div>
-                                            <div class="swiper-slide flex items-center justify-center h-full">
-                                                <img src="{% static 'image/oil _painting.jpg' %}" alt="Oil Painting 2"
-                                                    class="w-full h-full object-cover rounded">
-                                            </div>
-                                            <!-- Add more slides as needed -->
-                                        </div>
-                                        <!-- Navigation buttons -->
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-
-                                    </div>
-                                </div>
-                                <div class="w-full flex justify-between items-center mb-2">
-                                    <div>
-                                        <h3 class="text-base font-semibold text-gray-900">Oil Painting</h3>
-                                        <p class="text-sm text-gray-500">Made in Nepal</p>
-                                    </div>
-                                    <a href="" class="text-sm font-bold text-gray-700">View More</a>
-                                </div>
-                            </div>
-                            
-
-
                         </div>
+                        <div class="flex justify-between items-start gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-sm sm:text-base font-semibold text-gray-900 truncate">Oil
+                                    Painting</h3>
+                                <p class="text-xs sm:text-sm text-gray-500">Made in Nepal</p>
+                            </div>
+                            <a href="{% url 'website:product' %}"
+                                class="text-base font-bold bg-white text-gray-600 hover:text-gray-400">
+                                View More
+                            </a>
+                        </div>
+                    </div>
 
+                    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-3 sm:p-4 flex flex-col">
+                        <div class="w-full aspect-square mb-3 overflow-hidden rounded-lg">
+                            <div class="swiper w-full h-full">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="{% static 'image/oil painting1.jpg' %}" alt="Oil Painting"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" alt="Nepali Cholo"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next !text-white "></div>
+                                <div class="swiper-button-prev !text-white "></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-sm sm:text-base font-semibold text-gray-900 truncate">Oil
+                                    Painting</h3>
+                                <p class="text-xs sm:text-sm text-gray-500">Made in Nepal</p>
+                            </div>
+                            <a href="{% url 'website:product' %}"
+                                class="text-base font-bold bg-white text-gray-600 hover:text-gray-400">
+                                View More
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
