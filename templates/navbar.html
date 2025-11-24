@@ -32,12 +32,10 @@
             </svg>
           </button>
         </div>
+        <div class="text-white font-bold text-lg sm:text-xl">LOGO</div>
 
-        <!-- Logo + Desktop Menu -->
-        <div class="flex items-center space-x-4 text-gray-300">
-          <div class="text-white font-bold text-lg sm:text-xl">LOGO</div>
-
-          <div class="hidden sm:flex sm:space-x-2 md:space-x-4">
+        <div class="hidden sm:flex sm:absolute sm:left-1/2 text-gray-300">
+          <div class="flex space-x-2 md:space-x-4">
             <a href="{% url 'website:home' %}"
               class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded-md text-sm md:text-base">Home</a>
             <a href="{% url 'website:about' %}"

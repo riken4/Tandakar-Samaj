@@ -33,13 +33,6 @@
             <div class="swiper-slide relative flex items-center justify-center h-full">
                 <div class="absolute inset-0">
                     <img src="{% static 'image/banner2.jpg' %}" alt="Oil Painting 2" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black opacity-50"></div>
-                </div>
-                <div class="relative z-10 text-white text-center p-4 sm:p-6 md:p-8 max-w-xs sm:max-w-md md:max-w-2xl">
-                    <button
-                        class="bg-white text-gray-900 px-4 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded hover:bg-gray-200 transition font-bold text-xs sm:text-sm md:text-base shadow-lg">
-                        READ MORE
-                    </button>
                 </div>
             </div>
         </div>
@@ -57,8 +50,8 @@
                     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
                         shop
                     </h2>
-                    <a href="#"
-                        class="inline-block py-2 px-4 text-base font-medium bg-white text-gray-600 border border-gray-100 rounded-lg hover:bg-gray-50">
+                    <a href="{% url 'website:all_product' %}"
+                        class="inline-block py-2 px-4 text-base font-medium bg-white text-gray-600 border border-gray-100 rounded hover:bg-gray-50">
                         View All Product
                     </a>
                 </div>
@@ -269,7 +262,7 @@
     <section class="p-2 sm:p-2 md:p-3 bg-white">
         <div class="flex flex-col md:flex-row gap-6">
 
-            <div class="md:flex-grow md:w-3/4 bg-gray-200 shadow-lg rounded-lg p-4 sm:p-6 mb-2">
+            <div class="md:flex-grow md:w-3/4 bg-gray-200 shadow-lg rounded-lg p-2 sm:p-6 mb-2">
                 <div class="flex items-center justify-between mb-4">
                     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
                         Cloth
@@ -280,9 +273,8 @@
                     </a>
                 </div>
 
-                <div
-                    class="grid grid-cols-2 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-                    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-3 sm:p-4 flex flex-col">
+                <div class="grid grid-cols-2 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+                    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-2 sm:p-2 flex flex-col">
                         <div class="w-full aspect-square mb-3 overflow-hidden rounded-lg">
                             <div class="swiper w-full h-full">
                                 <div class="swiper-wrapper">
@@ -299,20 +291,21 @@
                                 <div class="swiper-button-prev !text-white "></div>
                             </div>
                         </div>
-                        <div class="flex justify-between items-start gap-2">
+                        <div class="flex flex-col flex-grow">
                             <div class="flex-1 min-w-0">
-                                <h3 class="text-sm sm:text-base font-semibold text-gray-900 truncate">Oil
-                                    Painting</h3>
-                                <p class="text-xs sm:text-sm text-gray-500">Made in Nepal</p>
+                                <h3 class="text-sm sm:text-base font-semibold text-gray-900 truncate">Oil Painting</h3>
+                                <div class="flex justify-between items-center mt-auto">
+                                    <span class="text-xs sm:text-xm text-gray-500">Made in Nepal</span>
+                                    <a href="{% url 'website:product' %}"
+                                        class="text-sm font-bold bg-white text-gray-600 hover:text-gray-400">
+                                        View More
+                                    </a>
+                                </div>
                             </div>
-                            <a href="{% url 'website:product' %}"
-                                class="text-base font-bold bg-white text-gray-600 hover:text-gray-400">
-                                View More
-                            </a>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-3 sm:p-4 flex flex-col">
+                    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-2 sm:p-2 flex flex-col">
                         <div class="w-full aspect-square mb-3 overflow-hidden rounded-lg">
                             <div class="swiper w-full h-full">
                                 <div class="swiper-wrapper">
@@ -329,21 +322,22 @@
                                 <div class="swiper-button-prev !text-white "></div>
                             </div>
                         </div>
-                        <div class="flex justify-between items-start gap-2">
+                        <div class="flex flex-col flex-grow">
                             <div class="flex-1 min-w-0">
-                                <h3 class="text-sm sm:text-base font-semibold text-gray-900 truncate">Oil
-                                    Painting</h3>
-                                <p class="text-xs sm:text-sm text-gray-500">Made in Nepal</p>
+                                <h3 class="text-sm sm:text-base font-semibold text-gray-900 truncate">Oil Painting</h3>
+                                <div class="flex justify-between items-center mt-auto">
+                                    <span class="text-xs sm:text-xm text-gray-500">Made in Nepal</span>
+                                    <a href="{% url 'website:product' %}"
+                                        class="text-sm font-bold bg-white text-gray-600 hover:text-gray-400">
+                                        View More
+                                    </a>
+                                </div>
                             </div>
-                            <a href="{% url 'website:product' %}"
-                                class="text-base font-bold bg-white text-gray-600 hover:text-gray-400">
-                                View More
-                            </a>
                         </div>
                     </div>
+
                 </div>
             </div>
-
             <div class="md:w-1/4 bg-gray-200 rounded-lg shadow-md px-4 overflow-y-auto h-[400px]">
                 <img src="{% static 'image/ad1.jpg' %}" class="h-full w-full object-cover rounded-md">
             </div>
