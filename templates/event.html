@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Products - hello bajar{% endblock %}
+{% block title %}Event{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -24,48 +24,22 @@
 {% endblock %}
 
 {% block content %}
-
-
-<!-- Hero Section -->
 <section
-    class="relative h-[200px] md:h-[400px]  bg-gradient-to-r from-purple-900 via-purple-700 to-pink-600 overflow-hidden">
-    <div class="absolute inset-0 bg-black opacity-40"></div>
+    class="relative h-[200px] md:h-[400px]  overflow-hidden">
     <div class="absolute inset-0 flex items-center justify-center text-center text-white">
         <!-- Swiper -->
         <div class="swiper w-full h-full rounded">
             <div class="swiper-wrapper">
                 <div class="swiper-slide flex items-center justify-center h-full">
-                    <img src="{% static 'image/banner1.jpg' %}" alt="Oil Painting 1"
+                    <img src="{% static 'image/event.jpg' %}" alt="Oil Painting 1"
                         class="w-full h-full object-cover rounded">
                 </div>
-                <div class="swiper-slide relative flex items-center justify-center h-full min-h-screen">
-                    <div class="absolute inset-0">
-                        <img src="{% static 'image/banner2.jpg' %}" alt="Oil Painting 2"
-                            class="w-full h-full object-cover">
-
-                        <div class="absolute inset-0 bg-black opacity-50"></div>
-                    </div>
-
-                    <div class="relative z-10 text-white text-center justify-center p-8 max-w-2xl">
-
-                        <button
-                            class="bg-white text-gray-900 px-8 py-3 rounded hover:bg-gray-200 transition font-bold text-sm shadow-lg">
-                            READ MORE
-                        </button>
-                    </div>
-                </div>
-                <!-- Add more slides as needed -->
             </div>
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-
         </div>
-
     </div>
 </section>
 
-<section class="p-10 sm:p-14">
+<section class="p-10 sm:p-14 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-4 ">
 
@@ -107,12 +81,7 @@
     </div>
 </section>
 
-
-
-
-
-<!-- Featured Events -->
-<section class="p-8  bg-white">
+<section class="p-8  ">
     <div class="container mx-auto px-4">
         <div class="pb-6 max-w-sm mx-auto items-center text-center">
             <h2 class="text-3xl font-bold">
@@ -121,13 +90,13 @@
         </div>
         <div class="grid  md:grid-cols-3 gap-6">
 
-            <!-- Featured Card 1 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+             {% for i in "123"|make_list %}
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl">
                 <div class="relative h-48 "> <img src="{% static 'image/event2.jpg' %}"
                         class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
-                    <h3 class="font-extrabold text-2xl text-gray-800 mb-1 group-hover:text-custom-green transition">
+                    <h3 class="font-extrabold text-2xl text-gray-800 mb-1">
                         Food Exhibition 2025
                     </h3>
                     <div class="flex items-center text-sm text-gray-500 mb-3">
@@ -138,69 +107,17 @@
                         <p class="text-xl font-bold text-gray-800">
                             Free Entry
                         </p>
-                        <a class="px-4 py-2 bg-gray-800 text-white font-medium text-sm 
+                        <a href="{% url 'website:event_detail' %}" class="px-4 py-2 bg-gray-800 text-white font-medium text-sm 
                                    rounded-lg shadow-md hover:bg-emerald-600 ">
                             Details
                         </a>
                     </div>
                 </div>
             </div>
-
-            <!-- Featured Card 2 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-                <div class="relative h-48 "> <img src="{% static 'image/event2.jpg' %}"
-                        class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                    <h3 class="font-extrabold text-2xl text-gray-800 mb-1 group-hover:text-custom-green transition">
-                        Food Exhibition 2025
-                    </h3>
-                    <div class="flex items-center text-sm text-gray-500 mb-3">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        Patan, Nepal
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 mt-4 flex justify-between items-center">
-                        <p class="text-xl font-bold text-gray-800">
-                            Free Entry
-                        </p>
-                        <a class="px-4 py-2 bg-gray-800 text-white font-medium text-sm 
-                                   rounded-lg shadow-md hover:bg-emerald-600 ">
-                            Details
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Featured Card 3 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-                <div class="relative h-48 "> <img src="{% static 'image/event3.jpg' %}"
-                        class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                    <h3 class="font-extrabold text-2xl text-gray-800 mb-1 group-hover:text-custom-green transition">
-                        Food Exhibition 2025
-                    </h3>
-                    <div class="flex items-center text-sm text-gray-500 mb-3">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        Patan, Nepal
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 mt-4 flex justify-between items-center">
-                        <p class="text-xl font-bold text-gray-800">
-                            Entry Fee - Rs.200
-                        </p>
-                        <a class="px-4 py-2 bg-gray-800 text-white font-medium text-sm 
-                                   rounded-lg shadow-md hover:bg-emerald-600 ">
-                            Details
-                        </a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
 
-{% endblock %}
-
-{% block extra_js %}
 
 {% endblock %}

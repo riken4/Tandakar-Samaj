@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Home {% endblock %}
+{% block title %}Product{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -58,11 +58,7 @@
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and
-                    scrambled it to make a type specimen book. </p>
-
-
-
-                <!-- Add to Bag Button -->
+                    scrambled it to make a type specimen book. </p> 
                 <div class="flex ">
                     <ul class=" space-y-2">
                         <li class="text-gray-700">
@@ -107,8 +103,8 @@
                                 <div>
                                     <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
                                     <div class="mt-1">
-                                        <input type="text" name="name" id="name" required
-                                            class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs focus:ring-blue-500 focus:border-blue-500 sm:text-base transition duration-150"
+                                        <input type="text" name="name" required
+                                            class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs  sm:text-base "
                                             placeholder="Name">
                                     </div>
                                 </div>
@@ -117,8 +113,8 @@
                                     <label for="email" class="block text-sm font-medium text-gray-700">Email
                                         Address</label>
                                     <div class="mt-1">
-                                        <input type="email" name="email" id="email" required
-                                            class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs focus:ring-blue-500 focus:border-blue-500 sm:text-base transition duration-150"
+                                        <input type="email" name="email" required
+                                            class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs  sm:text-base "
                                             placeholder="email@example.com">
                                     </div>
                                 </div>
@@ -127,8 +123,8 @@
                             <div>
                                 <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
                                 <div class="mt-1">
-                                    <input type="text" name="subject" id="subject"
-                                        class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs focus:ring-blue-500 focus:border-blue-500 sm:text-base transition duration-150"
+                                    <input type="text" name="subject"
+                                        class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs  sm:text-base "
                                         placeholder="">
                                 </div>
                             </div>
@@ -137,8 +133,8 @@
                                 <label for="message" class="block text-sm font-medium text-gray-700">Your
                                     Message</label>
                                 <div class="mt-1">
-                                    <textarea id="message" name="message" rows="5" required
-                                        class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs focus:ring-blue-500 focus:border-blue-500 sm:text-base transition duration-150"
+                                    <textarea  name="message" rows="5" required
+                                        class="block w-full px-4 py-1 border border-gray-300 rounded-lg shadow-xs  sm:text-base "
                                         placeholder=""></textarea>
                                 </div>
                             </div>
@@ -162,64 +158,27 @@
     <div class="bg-white shadow-2xl  dark:border-gray-700 rounded-lg p-2 md:p-3">
                 <h2 class="text-4xl text-center font-bold  text-gray-800 ">Shop</h2>
                <div
-                    class="grid grid-cols-2 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-                    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-3 sm:p-4 flex flex-col">
+                    class="grid grid-cols-2 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
+                    <div class="bg-white rounded-lg shadow-md hover:shadow-xl p-2 sm:p-2 flex flex-col">
                         <div class="w-full aspect-square mb-3 overflow-hidden rounded-lg">
-                            <div class="swiper w-full h-full">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
+                            <div class="w-full h-full">
                                         <img src="{% static 'image/oil painting1.jpg' %}" alt="Oil Painting"
                                             class="w-full h-full object-cover">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" alt="Nepali Cholo"
-                                            class="w-full h-full object-cover">
-                                    </div>
-                                </div>
                                 <div class="swiper-button-next !text-white "></div>
                                 <div class="swiper-button-prev !text-white "></div>
                             </div>
                         </div>
-                        <div class="flex justify-between items-start gap-2">
+                        <div class="flex flex-col flex-grow">
                             <div class="flex-1 min-w-0">
-                                <h3 class="text-sm sm:text-base font-semibold text-gray-900 truncate">Oil
-                                    Painting</h3>
-                                <p class="text-xs sm:text-sm text-gray-500">Made in Nepal</p>
-                            </div>
-                            <a href="{% url 'website:product' %}"
-                                class="text-base font-bold bg-white text-gray-600 hover:text-gray-400">
-                                View More
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition p-3 sm:p-4 flex flex-col">
-                        <div class="w-full aspect-square mb-3 overflow-hidden rounded-lg">
-                            <div class="swiper w-full h-full">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="{% static 'image/oil painting1.jpg' %}" alt="Oil Painting"
-                                            class="w-full h-full object-cover">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="{% static 'image/Dhaka Nepali Cholo.jpg' %}" alt="Nepali Cholo"
-                                            class="w-full h-full object-cover">
-                                    </div>
+                                <h3 class="text-sm sm:text-base font-semibold text-gray-900 truncate">Oil Painting</h3>
+                                <div class="flex justify-between items-center mt-auto">
+                                    <span class="text-xs sm:text-xm text-gray-500">Made in Nepal</span>
+                                    <a href="{% url 'website:product' %}"
+                                        class="text-sm font-bold bg-white text-gray-600 hover:text-gray-400">
+                                        View More
+                                    </a>
                                 </div>
-                                <div class="swiper-button-next !text-white "></div>
-                                <div class="swiper-button-prev !text-white "></div>
                             </div>
-                        </div>
-                        <div class="flex justify-between items-start gap-2">
-                            <div class="flex-1 min-w-0">
-                                <h3 class="text-sm sm:text-base font-semibold text-gray-900 truncate">Oil
-                                    Painting</h3>
-                                <p class="text-xs sm:text-sm text-gray-500">Made in Nepal</p>
-                            </div>
-                            <a href="{% url 'website:product' %}"
-                                class="text-base font-bold bg-white text-gray-600 hover:text-gray-400">
-                                View More
-                            </a>
                         </div>
                     </div>
                 </div>

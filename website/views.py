@@ -40,3 +40,9 @@ def all_product(request):
 
 def account(request):
     return render(request, 'account.html')
+
+def event_detail(request):
+    return render(request, 'event_detail.html')
+
+def blog_detail(request):
+    return render(request, 'blog_detail.html')

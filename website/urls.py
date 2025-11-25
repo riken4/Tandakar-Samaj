@@ -18,6 +18,7 @@ urlpatterns = [
         path('privacy_policy', views.privacy_policy, name='privacy_policy'),
         path('all_product', views.all_product, name='all_product'),
         path('account', views.account, name='account'),
-
+        path('event_detail', views.event_detail, name='event_detail'),
+        path('blog_detail', views.blog_detail, name='blog_detail'),
 
 ]

@@ -1,65 +1,48 @@
 <footer class="bg-gray-900 text-gray-300 py-10 px-6 ">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-10">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-10 md:gap-50">
     <div class="md:w-1/4 mb-6">
     <div class="flex text-2xl items-center mb-4">
         <i class="bi bi-telephone mr-2"></i>
         <h4 class="font-bold mb-3 text-gray-300">Have Question? Reach us</h4>
     </div>
     <p class="text-lg mb-1">+977 984125489</p>
-    <p class="mb-1">Email: <a href="mailto:info@hellobajar.com.au"
-            class="text-gray-700 hover:text-orange-700 transition duration-150 ease-in-out">hellobajar@gmail.com</a></p>
-    <p class="mb-1"><a href="#" class="text-gray-700 hover:text-orange-700 transition duration-150 ease-in-out">Chat on WhatsApp</a></p>
+    <p class="mb-1">Email: <a href=""
+            class="text-gray-500 hover:text-orange-700 ">tandukarsamaj@gmail.com</a></p>
+    <p class="mb-1"><a href="#" class="text-gray-500 hover:text-orange-700 ">Chat on WhatsApp</a></p>
     <div>
         <span class="mr-2">Follow Us:</span>
         <div class="flex space-x-2 mt-1 ">
-            <a class="tech-icon text-gray-600 hover:text-white transition duration-150 ease-in-out pr-2" href="" title="facebook">
+            <a class="tech-icon text-gray-600 hover:text-white  pr-2" href="" title="facebook">
                 <i class="bi bi-facebook text-xl"></i>
             </a>
-            <a class="text-gray-600 hover:text-white transition duration-150 ease-in-out pr-2" href="" title="instagram">
+            <a class="text-gray-600 hover:text-white  pr-2" href="" title="instagram">
                 <i class="bi bi-instagram text-xl"></i>
             </a>
-            <div class="text-gray-600 hover:text-white transition duration-150 ease-in-out pr-2" title="whatsapp">
+            <div class="text-gray-600 hover:text-white  pr-2" title="whatsapp">
                 <i class="bi bi-whatsapp text-xl"></i>
             </div>
-            <a class="text-gray-600 hover:text-white transition duration-150 ease-in-out pr-2" href="" title="tiktok">
+            <a class="text-gray-600 hover:text-white  pr-2" href="" title="tiktok">
                 <i class="bi bi-tiktok text-xl"></i>
             </a>
         </div>
     </div>
 </div>
-    <div class="flex-1 grid grid-cols-2 md:grid-cols-4 gap-8">
-      <div>
-        <h3 class="font-semibold mb-3 text-gray-300">Solutions</h3>
-        <ul class="space-y-2 text-gray-500">
-          <li><a href="#" class="hover:text-orange-700">Marketing</a></li>
-          <li><a href="#" class="hover:text-orange-700">Analytics</a></li>
-          <li><a href="#" class="hover:text-orange-700">Automation</a></li>
-          <li><a href="#" class="hover:text-orange-700">Commerce</a></li>
-          <li><a href="#" class="hover:text-orange-700">Insights</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-3 text-gray-300">Support</h3>
-        <ul class="space-y-2 text-gray-500">
-          <li><a href="#" class="hover:text-orange-700">Submit ticket</a></li>
-          <li><a href="#" class="hover:text-orange-700">Documentation</a></li>
-          <li><a href="#" class="hover:text-orange-700">Guides</a></li>
-        </ul>
-      </div>
-      <div>
+    <div class="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8 ">
+     
+            <div>
         <h3 class="font-semibold mb-3 text-gray-300">Company</h3>
         <ul class="space-y-2 text-gray-500">
-          <li><a href="#" class="hover:text-orange-700">About</a></li>
-          <li><a href="#" class="hover:text-orange-700">Blog</a></li>
-          <li><a href="#" class="hover:text-orange-700">Jobs</a></li>
-          <li><a href="#" class="hover:text-orange-700">Press</a></li>
+          <li><a href="{% url 'website:about' %}" class="hover:text-orange-700">About</a></li>
+          <li><a href="{% url 'website:blog' %}" class="hover:text-orange-700">Blog</a></li>
+          <li><a href="{% url 'website:team' %}" class="hover:text-orange-700">Team</a></li>
         </ul>
       </div>
       <div>
         <h3 class="font-semibold mb-3 text-gray-300">Legal</h3>
         <ul class="space-y-2 text-gray-500">
-          <li><a href="#" class="hover:text-orange-700">Terms of service</a></li>
-          <li><a href="#" class="hover:text-orange-700">Privacy policy</a></li>
+          <li><a href="{% url 'website:faq' %}" class="hover:text-orange-700">FAQs</a></li>
+          <li><a href="{% url 'website:term_of_services' %}" class="hover:text-orange-700">Terms of service</a></li>
+          <li><a href="{% url 'website:privacy_policy' %}" class="hover:text-orange-700">Privacy policy</a></li>
           <li><a href="#" class="hover:text-orange-700">License</a></li>
         </ul>
       </div>

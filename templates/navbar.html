@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Navigation</title>
+  <title>Navigation</title>
 </head>
 
 <body class="bg-gray-100">
@@ -14,62 +14,52 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 justify-between items-center">
 
-        <!-- Mobile Toggle Button (Visible Only on Mobile) -->
         <div class="sm:hidden flex items-center">
-          <button id="mobile-menu-btn"
-            class="text-gray-400 hover:text-white hover:bg-gray-700 p-2 rounded-md transition-colors duration-200"
+          <button id="mobile-menu-btn" class="text-gray-400 hover:text-white hover:bg-gray-700 p-2 rounded-md"
             aria-label="Toggle menu">
-            <!-- Menu Icon -->
-            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            <i id="menu-icon" class="bi bi-list text-3xl"></i>
 
-            <!-- Close Icon -->
-            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            <i id="close-icon" class="bi-x hidden text-3xl"></i>
+
           </button>
         </div>
-        <div class="text-white font-bold text-lg sm:text-xl">LOGO</div>
+        <div class="text-white font-bold text-lg sm:text-xl">
+          <a href="{% url 'website:home' %}">LOGO</a>
+        </div>
+        
 
-        <div class="hidden sm:flex sm:absolute sm:left-1/2 text-gray-300">
+        <div class="hidden sm:flex sm:absolute sm:left-1/2  sm:-translate-x-1/2 text-gray-300">
           <div class="flex space-x-2 md:space-x-4">
             <a href="{% url 'website:home' %}"
-              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded-md text-sm md:text-base">Home</a>
+              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded text-sm md:text-base">Home</a>
             <a href="{% url 'website:about' %}"
-              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded-md text-sm md:text-base">About</a>
+              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded text-sm md:text-base">About</a>
             <a href="{% url 'website:services' %}"
-              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded-md text-sm md:text-base">Services</a>
+              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded text-sm md:text-base">Services</a>
             <a href="{% url 'website:event' %}"
-              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded-md text-sm md:text-base">Event</a>
+              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded text-sm md:text-base">Event</a>
             <a href="{% url 'website:team' %}"
-              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded-md text-sm md:text-base">Team</a>
+              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded text-sm md:text-base">Team</a>
             <a href="{% url 'website:blog' %}"
-              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded-md text-sm md:text-base">Blog</a>
+              class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded text-sm md:text-base">Blog</a>
           </div>
         </div>
-        <div class="relative group w-fit text-gray-300">
-          <a href="{% url 'website:shop' %}"
-            class="px-2 md:px-3 py-2 hover:bg-gray-700 rounded-md transition-colors duration-200 text-sm md:text-base">Shop</a>
+        <div class="py-1 px-3 hover:text-white font-medium bg-white text-gray-800 rounded-md hover:bg-gray-900">
+          <a href="{% url 'website:shop' %}" class="px-2 md:px-3 text-sm md:text-base">Shop</a>
         </div>
       </div>
     </div>
 
-    <!-- Mobile Menu with Smooth Transition -->
-    <div id="mobile-menu" class="sm:hidden hidden bg-gray-800 px-4 pb-4 space-y-2 ease-in-out">
-      <a href="{% url 'website:home' %}" class="block px-3 py-2 hover:bg-gray-700 rounded-md text-gray-300 ">Home</a>
-      <a href="{% url 'website:about' %}" class="block px-3 py-2 hover:bg-gray-700 rounded-md text-gray-300">About</a>
+    <!-- Mobile Menu-->
+    <div id="mobile-menu" class="sm:hidden hidden bg-gray-800 px-4 pb-4 space-y-2">
+      <a href="{% url 'website:home' %}" class="block px-3 py-2 hover:bg-gray-700 rounded text-gray-300 ">Home</a>
+      <a href="{% url 'website:about' %}" class="block px-3 py-2 hover:bg-gray-700 rounded text-gray-300">About</a>
       <a href="{% url 'website:services' %}"
-        class="block px-3 py-2 hover:bg-gray-700 rounded-md text-gray-300">Services</a>
-      <a href="{% url 'website:event' %}" class="block px-3 py-2 hover:bg-gray-700 rounded-md text-gray-300">Event</a>
-      <a href="{% url 'website:team' %}" class="block px-3 py-2 hover:bg-gray-700 rounded-md text-gray-300">Team</a>
-      <a href="{% url 'website:blog' %}" class="block px-3 py-2 hover:bg-gray-700 rounded-md text-gray-300">Blog</a>
-      <a href="{% url 'website:shop' %}" class="block px-3 py-2 hover:bg-gray-700 rounded-md text-gray-300">Shop</a>
-
-
-
+        class="block px-3 py-2 hover:bg-gray-700 rounded text-gray-300">Services</a>
+      <a href="{% url 'website:event' %}" class="block px-3 py-2 hover:bg-gray-700 rounded text-gray-300">Event</a>
+      <a href="{% url 'website:team' %}" class="block px-3 py-2 hover:bg-gray-700 rounded text-gray-300">Team</a>
+      <a href="{% url 'website:blog' %}" class="block px-3 py-2 hover:bg-gray-700 rounded text-gray-300">Blog</a>
+      <a href="{% url 'website:shop' %}" class="block px-3 py-2 hover:bg-gray-700 rounded text-gray-300">Shop</a>
     </div>
   </nav>
 
@@ -96,7 +86,7 @@
       }
     });
 
-    // Close mobile menu on window resize to desktop size
+    // Close mobile menu on window resize
     window.addEventListener('resize', () => {
       if (window.innerWidth >= 640) {
         menu.classList.add('hidden');

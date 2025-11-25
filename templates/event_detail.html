@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Event Detail{% endblock %}
+
+{% block extra_css %}
+<style>
+    .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lightbox.active {
+        display: flex;
+    }
+
+    .lightbox-image {
+        width: 800px;
+        height: 800px;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .close-btn:hover {
+        color: #ccc;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="relative h-96">
+    <img src="{% static 'image/food.jpg' %}" alt="Food Exhibition" class="w-full h-full object-cover ">
+    <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-center text-white px-4">
+            <h1 class="text-5xl font-bold mb-4">Food Exhibition 2025</h1>
+            <p class="text-xl flex items-center justify-center gap-2">
+                <i class="bi bi-geo-alt-fill"></i>
+                Patan, Nepal
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2 space-y-8">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Event Overview</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry, used since the 1500s. It
+                    is derived from a work by the Roman statesman and philosopher Cicero, altered to create nonsensical
+                    and improper Latin. Today, it serves as a standard placeholder text in design and publishing, </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry, used since the 1500s. It
+                    is derived from a work by the Roman statesman and philosopher Cicero, altered to create nonsensical
+                    and improper Latin.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">What to Expect</h2>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="flex items-start gap-3">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Food Tasting</h3>
+                            <p class="text-sm text-gray-600">Sample dishes from 50+ vendors</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Live Demonstrations</h3>
+                            <p class="text-sm text-gray-600">Watch expert chefs in action</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Cooking Competitions</h3>
+                            <p class="text-sm text-gray-600">Exciting culinary challenges</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Networking</h3>
+                            <p class="text-sm text-gray-600">Connect with industry professionals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Event Gallery</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <img src="{% static 'image/oil painting1.jpg' %}"
+                    class="rounded-lg h-40 w-full object-cover cursor-pointer hover:opacity-80 transition-opacity"
+                    onclick="openLightbox(this.src)" alt="Event 1">
+                <img src="{% static 'image/banner1.jpg' %}"
+                    class="rounded-lg h-40 w-full object-cover cursor-pointer hover:opacity-80 transition-opacity"
+                    onclick="openLightbox(this.src)" alt="Event 2">
+                <img src="{% static 'image/team member1.jpg' %}"
+                    class="rounded-lg h-40 w-full object-cover cursor-pointer hover:opacity-80 transition-opacity"
+                    onclick="openLightbox(this.src)" alt="Event 3">
+                <img src="{% static 'image/banner2.jpg' %}"
+                    class="rounded-lg h-40 w-full object-cover cursor-pointer hover:opacity-80 transition-opacity"
+                    onclick="openLightbox(this.src)" alt="Event 4">
+                
+            </div>
+
+        </div>
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" class="lightbox-image" src="" alt="Lightbox Image">
+        </div>
+        <div class="md:col-span-1">
+            <div class="bg-white rounded-lg shadow-md p-6 top-4">
+                <div class="mb-6">
+                    <span class="inline-block bg-green-100 text-green-800 text-sm font-semibold px-4 py-2 rounded-full">
+                        Free Entry
+                    </span>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Date & Time</h3>
+                            <p class="text-gray-600 text-sm">March 15-17, 2025</p>
+                            <p class="text-gray-600 text-sm">10:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Location</h3>
+                            <p class="text-gray-600 text-sm">Patan Durbar Square</p>
+                            <p class="text-gray-600 text-sm">Patan, Nepal</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Organizer</h3>
+                            <p class="text-gray-600 text-sm">Nepal Food Association</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Category</h3>
+                            <p class="text-gray-600 text-sm">Food & Beverage, Exhibition</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 space-y-3">
+                    <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg">
+                        Register Now
+                    </button>
+                    <button
+                        class="w-full border-2 border-orange-500 text-orange-500 hover:bg-orange-50 font-semibold py-3 rounded-lg">
+                        Share Event
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block extra_js %}
+<script>
+    function openLightbox(src) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+    }
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+</script>
+{% endblock %}
